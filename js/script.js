@@ -34,10 +34,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
     addForm.addEventListener("submit", (event) => {
         event.preventDefault(); // sahifa qayta yuklanmasligi uchun
-
         let newFilm = addInput.value;
         const favourite = checkbox.checked;
-
         if (newFilm) {
             if (newFilm.length > 21) {
                 newFilm = `${newFilm.substring(0, 21)}...`;
@@ -79,11 +77,9 @@ document.addEventListener("DOMContentLoaded", () => {
             btn.addEventListener("click", () => {
                 btn.parentElement.remove();
                 news.splice(index, 1);
-
                 createNewsList(newsList, parent);
             });
         });
     }
-
     createNewsList(news, listNews);
 });
